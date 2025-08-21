@@ -1,11 +1,13 @@
 # Dependencies
 node_modules
 .pnpm-store
+pnpm-debug.log*
 
 # Build outputs
 .next
 out
 dist
+build
 
 # Development files
 .env.local
@@ -38,6 +40,38 @@ Thumbs.db
 # Testing
 coverage
 .nyc_output
+
+# Cache directories
+.turbo/
+.parcel-cache/
+.cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Documentation (not needed for deployment)
+docs/
+README*.md
+CHANGELOG*.md
+CONTRIBUTING.md
+LICENSE*
+
+# CI/CD files
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Docker files
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Render specific files (not needed for Vercel)
+render.yaml
+build.sh
+start.sh
+use-minimal-config.sh
+next.config.minimal.ts
 
 # Misc
 *.tgz

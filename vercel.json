@@ -3,7 +3,9 @@
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=4096",
       "NEXT_TELEMETRY_DISABLED": "1",
-      "SKIP_ENV_VALIDATION": "1"
+      "SKIP_ENV_VALIDATION": "1",
+      "NODE_ENV": "production",
+      "VERCEL": "1"
     }
   },
   "buildCommand": "pnpm run build",
@@ -13,5 +15,5 @@
       "maxDuration": 60
     }
   },
-  "installCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm install --no-frozen-lockfile"
+  "outputDirectory": ".next"
 }
