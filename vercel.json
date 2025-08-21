@@ -1,17 +1,17 @@
 {
-  "buildCommand": "pnpm run build",
-  "installCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm install --frozen-lockfile",
-  "framework": "nextjs",
-  "functions": {
-    "app/api/**/*.ts": {
-      "maxDuration": 60
-    }
-  },
   "build": {
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=4096",
       "NEXT_TELEMETRY_DISABLED": "1",
       "SKIP_ENV_VALIDATION": "1"
     }
-  }
+  },
+  "buildCommand": "pnpm run build",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 60
+    }
+  },
+  "installCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm install --no-frozen-lockfile"
 }
